@@ -1,0 +1,115 @@
+# RESUMO DA SEQUÊNCIA DE COMMANDOS - LISTA 01 - EXERCÍCIO 04
+# SER-347 - João Felipe Cardoso dos Santos
+
+jcardoso@jcardoso:~/SER347/repositories$ git clone https://github.com/joaofelipecsantos/ser-347-joaosantos.git
+Cloning into 'ser-347-joaosantos'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+
+jcardoso@jcardoso:~/SER347/repositories$ ls
+ser-347 ser-347-joaosantos
+
+jcardoso@jcardoso:~/SER347/repositories$ cd ser-347-joaosantos/
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ ls -a
+. .. .git .gitignore LICENSE README.md
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ nano arquivo01.txt
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ nano arquivo02.txt
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ nano arquivo03.txt
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ nano arquivo04.txt
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+(use "git add ..." to include in what will be committed)
+
+arquivo01.txt
+arquivo02.txt
+arquivo03.txt
+arquivo04.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git add arquivo01.txt
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git reset HEAD ..." to unstage)
+
+new file: arquivo01.txt
+
+Untracked files:
+(use "git add ..." to include in what will be committed)
+
+arquivo02.txt
+arquivo03.txt
+arquivo04.txt
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git add *
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git reset HEAD ..." to unstage)
+
+new file: arquivo01.txt
+new file: arquivo02.txt
+new file: arquivo03.txt
+new file: arquivo04.txt
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git commit arquivo01.txt -m "Teste: criando commit para um arquivo específico"
+[main 5549ab4] Teste: criando commit para um arquivo específico
+1 file changed, 1 insertion(+)
+create mode 100644 arquivo01.txt
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+(use "git push" to publish your local commits)
+
+Changes to be committed:
+(use "git reset HEAD ..." to unstage)
+
+new file: arquivo02.txt
+new file: arquivo03.txt
+new file: arquivo04.txt
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git commit -m "Teste: criando commit para todos os arquivos restantes"
+[main cbcf002] Teste: criando commit para todos os arquivos restantes
+3 files changed, 3 insertions(+)
+create mode 100644 arquivo02.txt
+create mode 100644 arquivo03.txt
+create mode 100644 arquivo04.txt
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+(use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git pull
+Already up to date.
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ git push
+Username for 'https://github.com': joaofelipecsantos
+Password for 'https://joaofelipecsantos@github.com':
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 781 bytes | 781.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/joaofelipecsantos/ser-347-joaosantos.git
+1a0b5fe..cbcf002 main -> main
+
+jcardoso@jcardoso:~/SER347/repositories/ser-347-joaosantos$ ls
+arquivo01.txt arquivo02.txt arquivo03.txt arquivo04.txt LICENSE README.md
+
+
